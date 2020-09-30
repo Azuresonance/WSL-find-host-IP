@@ -11,7 +11,7 @@ A common solution is taking advantage of WSL's dynamically generated `/etc/resol
 Unfortunately, this is a temporary unreliable solution, since your Windows host's IP is dynamic, that IP changes every time you reboot.
 
 
-This tutorial helps you set up a domain name (windowshost) for your Windows host, so that you can access it whenever you need to find your Windows host.
+**This tutorial helps you set up a domain name (`windowshost`) for your Windows host, so that you can access it whenever you need to find your Windows host.**
 
 ## How it does it
 This solution automatically detects changes in `/etc/resolv.conf`, grabs the new IP and writes it into your `/etc/hosts` file.
