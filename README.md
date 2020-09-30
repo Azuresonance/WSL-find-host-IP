@@ -16,7 +16,7 @@ This tutorial helps you set up a domain name (windowshost) for your Windows host
 ## How it does it
 This solution automatically detects changes in `/etc/resolv.conf`, grabs the new IP and writes it into your `/etc/hosts` file.
 
-## Step 0: Requirements
+## Part 0: Requirements
 I personally tested it on Windows 10 1909, and WSL2 of Ubuntu 20.04.
 For other system versions it should work, but use at your own risk.
 
