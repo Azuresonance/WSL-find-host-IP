@@ -2,17 +2,17 @@
 Your Linux subsystem might need to find the IP of your Windows host realibly.
 
 ## What it does
-With WSL, your Windows host can access your Linux subsystem's network services by simply accessing localhost(127.0.0.1).
+With WSL, your Windows host can access your Linux subsystem's network services by simply accessing localhost (`127.0.0.1`).
 However, as of now, this doesn't work the other way around. You cannot access your Windows host from within WSL via localhost.
 
-A common solution is taking advantage of WSL's dynamically generated /etc/resolv.conf file (https://github.com/Microsoft/WSL/issues/1032#issuecomment-535764958).
+A common solution is taking advantage of WSL's dynamically generated `/etc/resolv.conf` file (https://github.com/Microsoft/WSL/issues/1032#issuecomment-535764958).
 Unfortunately, this is a temporary unreliable solution, since your Windows host's IP is dynamic, that IP changes every time you reboot.
 
 
 This tutorial helps you set up a domain name (windowshost) for your Windows host, so that you can access it whenever you need to find your Windows host.
 
 ## How it does it
-This solution automatically detects changes in /etc/resolv.conf, grabs the new IP and writes it into your /etc/hosts file.
+This solution automatically detects changes in `/etc/resolv.conf`, grabs the new IP and writes it into your `/etc/hosts` file.
 
 ## Step 0: Requirements
 I personally tested it on Windows 10 1909, and WSL2 of Ubuntu 20.04.
@@ -58,11 +58,11 @@ Open crontab with sudo:
 ```
 sudo crontab -e
 ```
-Choose your favorite text editor (nano is the easiest) and add the following line at the end of the file that automatically opened.
+Choose your favorite text editor (*nano* is the easiest) and add the following line at the end of the file that automatically opened.
 ```
 * * * * * run-one /usr/local/sbin/update_hosts_domain.sh
 ```
-Save and exit (on nano it is Ctrl+X and press Enter)
+Save and exit (on *nano* it is Ctrl+X and press Enter)
 
 ## Part 3: Enable the cron service
 Unlike normal Linux distros, on WSL, cron does not start automatically on boot.
