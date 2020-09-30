@@ -3,9 +3,11 @@ Your Linux subsystem might need to find the IP of your Windows host realibly.
 
 ## What it does
 With WSL, your Windows host can access your Linux subsystem's network services by simply accessing localhost (`127.0.0.1`).
-However, as of now, this doesn't work the other way around. You cannot access your Windows host from within WSL via localhost.
+
+However, as of now, this **doesn't work the other way around**. You cannot access your Windows host from within WSL via localhost.
 
 A common solution is taking advantage of WSL's dynamically generated `/etc/resolv.conf` file (https://github.com/Microsoft/WSL/issues/1032#issuecomment-535764958).
+
 Unfortunately, this is a temporary unreliable solution, since your Windows host's IP is dynamic, that IP changes every time you reboot.
 
 
