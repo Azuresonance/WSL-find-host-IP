@@ -27,7 +27,7 @@ sudo apt install inotify-tools run-one
 ```
 
 ## Part 1: Create script
-Save the following text as new file /usr/local/sbin/update_hosts_domain.sh
+Save the following text as new file `/usr/local/sbin/update_hosts_domain.sh`
 ```
 #!/usr/bin/bash
 dir1=/etc/resolv.conf
