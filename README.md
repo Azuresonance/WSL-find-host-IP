@@ -127,7 +127,7 @@ At *Add arguments (optional)* set this: `sudo cronstart.sh`
 **Done!**
 You should now be able to use `windowshost` as a domain name for your Windows host from within WSL.
 This should work even when you reboot, but you need to wait for a minute before it takes effect.
-You can check by pinging your host:
+You can check by looking up your host's IP:
 ```
-ping windowshost
+nslookup windowshost
 ```
