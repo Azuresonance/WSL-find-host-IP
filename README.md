@@ -131,3 +131,7 @@ You can check by looking up your host's IP:
 ```
 nslookup windowshost
 ```
+## Appendix
+For some reason you might want to `ping windowshost` to check the connection and find it not working.
+This is because Windows 10 drops all incoming ICMP packets by default.
+You can enable it by doing this: https://github.com/microsoft/WSL/issues/4171#issuecomment-559961027
