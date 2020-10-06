@@ -123,6 +123,9 @@ Pick *Start a program* for the *action type* and then enter `C:\Windows\System32
 
 At *Add arguments (optional)* set this: `sudo cronstart.sh`
 
+**Condition tab**:
+If you are using a laptop, and you want this to work even when you are on battery, you can uncheck the *start the task only if the computer is on ac power* option.
+
 ## Part 4:
 **Done!**
 You should now be able to use `windowshost` as a domain name for your Windows host from within WSL.
